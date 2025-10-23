@@ -137,9 +137,9 @@ echo "[]" > blacklist.remote.json
 
 3. Simulate a deployment by running the following command
 
-```sh
+````sh
 yarn forge:simulate scripts/deploy/deploy-fiat-token.s.sol --rpc-url <testnet OR mainnet>
-```
+```yarn forge:simulate scripts/deploy/deploy-fiat-token.s.sol --rpc-url https://ethereum-sepolia.publicnode.com
 
 4. Validate that all transactions to be broadcasted are filled in with the
    correct values
@@ -147,7 +147,9 @@ yarn forge:simulate scripts/deploy/deploy-fiat-token.s.sol --rpc-url <testnet OR
 
 ```sh
 yarn forge:broadcast scripts/deploy/deploy-fiat-token.s.sol --rpc-url <testnet OR mainnet>
-```
+yarn forge:broadcast scripts/deploy/deploy-fiat-token.s.sol --rpc-url https://ethereum-sepolia.publicnode.com
+
+````
 
 6. Verify the contracts on an Etherscan flavored block explorer by running the
    following command. Ensure that `ETHERSCAN_KEY` is set in the `.env` file.
